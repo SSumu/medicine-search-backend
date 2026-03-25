@@ -1,0 +1,25 @@
+package com.medicalsystem.medicine_search.repository;
+
+import com.medicalsystem.medicine_search.entity.Medicine;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface MedicineRepository extends JpaRepository<Medicine, Long> {
+
+    // Find medicines by name (case-insensitive)
+    List<Medicine> findByNameContainingIgnoreCase(String name);
+
+    // Find medicines by manufacturer
+    List<Medicine> findByManufacturerContainingIgnoreCase(String manufacturer);
+
+    // Find medicines within a price range
+    List<Medicine> findByPriceBetween(double minPrice, double maxPrice);
+
+    // Find medicines by name and price range
+    List<Medicine> findByNameContainingIgnoreCaseAndPriceBetween(
+            String name, double minPrice, double maxPrice
+    );
+}
