@@ -12,7 +12,7 @@ public interface MedicineRepository extends JpaRepository<Medicine, Long> {
     // Find medicines by name (case-insensitive)
     List<Medicine> findByNameContainingIgnoreCase(String name);
 
-    // Find medicines by manufacturer
+    // Optional: Find medicines by manufacturer
     List<Medicine> findByManufacturerContainingIgnoreCase(String manufacturer);
 
     // Find medicines within a price range

@@ -1,6 +1,6 @@
 package com.medicalsystem.medicine_search.controller;
 
-import com.medicalsystem.medicine_search.dto.MedicineSearchResponse;
+import com.medicalsystem.medicine_search.dto.MedicineSearchResponseDTO;
 import com.medicalsystem.medicine_search.entity.Medicine;
 import com.medicalsystem.medicine_search.service.MedicineService;
 import lombok.RequiredArgsConstructor;
@@ -34,7 +34,7 @@ public class MedicineController {
 
     // Search medicines by name
     @GetMapping("/search")
-    public ResponseEntity<List<MedicineSearchResponse>> searchMedicines(@RequestParam String name) {
+    public ResponseEntity<List<MedicineSearchResponseDTO>> searchMedicines(@RequestParam String name) {
         return ResponseEntity.ok(medicineService.searchMedicinesByName(name));
     }
 

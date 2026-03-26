@@ -1,6 +1,6 @@
 package com.medicalsystem.medicine_search.service;
 
-import com.medicalsystem.medicine_search.dto.MedicineSearchResponse;
+import com.medicalsystem.medicine_search.dto.MedicineSearchResponseDTO;
 import com.medicalsystem.medicine_search.entity.Medicine;
 
 import java.util.List;
@@ -21,5 +21,5 @@ public interface MedicineService {
 
     void deleteMedicine(Long id);
 
-    List<MedicineSearchResponse> searchMedicinesByName(String name);
+    List<MedicineSearchResponseDTO> searchMedicinesByName(String name);
 }

@@ -12,19 +12,19 @@ import java.util.Optional;
 @Repository
 public interface InventoryRepository extends JpaRepository<Inventory, Long> {
 
-    // Find all inventory records by Medicine
+    // Search inventory by Medicine
     List<Inventory> findByMedicine(Medicine medicine);
 
-    // Find all inventory records by Pharmacy
+    // Search inventory records by Pharmacy
     List<Inventory> findByPharmacy(Pharmacy pharmacy);
 
-    // Find specific inventory by Medicine and Pharmacy
+    // Search specific inventory by Medicine and Pharmacy
     Optional<Inventory> findByMedicineAndPharmacy(Medicine medicine, Pharmacy pharmacy);
 
-    // Find inventory by medicine name (useful for search feature)
+    // Search inventory by medicine name (useful for search feature)
     List<Inventory> findByMedicine_NameContainingIgnoreCase(String name);
 
-    // Find inventory by medicine name and sort by price (ascending)
+    // Search inventory by medicine name and sort by price (ascending)
     List<Inventory> findByMedicine_NameContainingIgnoreCaseOrderByPriceAsc(String name);
 
     // Find available stock (quantity > 0)

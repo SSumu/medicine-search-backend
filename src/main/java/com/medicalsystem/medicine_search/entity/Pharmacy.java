@@ -22,7 +22,7 @@ public class Pharmacy {
     private String name;
 
     @Column(nullable = false)
-    private String address;
+    private String location;
 
     @Column(nullable = false)
     private String city;
