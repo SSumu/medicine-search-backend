@@ -9,12 +9,6 @@ import java.util.List;
 @Repository
 public interface MedicineRepository extends JpaRepository<Medicine, Long> {
 
-    // Find medicines by name (case-insensitive)
-    List<Medicine> findByNameContainingIgnoreCase(String name);
-
-    // Optional: Find medicines by manufacturer
-    List<Medicine> findByManufacturerContainingIgnoreCase(String manufacturer);
-
     // Find medicines within a price range
     List<Medicine> findByPriceBetween(double minPrice, double maxPrice);
 

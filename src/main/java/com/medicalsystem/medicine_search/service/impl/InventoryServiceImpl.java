@@ -1,16 +1,12 @@
 package com.medicalsystem.medicine_search.service.impl;
 
-import com.medicalsystem.medicine_search.dto.InventoryResponseDTO;
 import com.medicalsystem.medicine_search.entity.Inventory;
-import com.medicalsystem.medicine_search.mapper.InventoryMapper;
 import com.medicalsystem.medicine_search.repository.InventoryRepository;
 import com.medicalsystem.medicine_search.service.InventoryService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class InventoryServiceImpl implements InventoryService {

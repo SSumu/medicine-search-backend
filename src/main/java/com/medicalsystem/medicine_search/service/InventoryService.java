@@ -1,10 +1,8 @@
 package com.medicalsystem.medicine_search.service;
 
-import com.medicalsystem.medicine_search.dto.InventoryResponseDTO;
 import com.medicalsystem.medicine_search.entity.Inventory;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface InventoryService {
 
