@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/inventory")
+@CrossOrigin(origins = "http://localhost:4200")
 public class InventoryController {
 
     private final InventoryService inventoryService;
