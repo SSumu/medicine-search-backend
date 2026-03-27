@@ -15,7 +15,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // allow all endpoints
-                        .allowedOrigins("http://localhost:4200") // Angular frontend
+                        .allowedOrigins("http://localhost:4200", "http://localhost:8080") // Allow Angular frontend and Swagger
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
 //                        .allowCredentials(true)
